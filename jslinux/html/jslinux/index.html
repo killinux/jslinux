@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>killinux</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style>
+.term {
+    font-family: courier,fixed,swiss,monospace,sans-serif;
+    font-size: 14px;
+    color: #f0f0f0;
+    background: #000000;
+}
+
+.termReverse {
+    color: #000000;
+    background: #00ff00;
+}
+#note {
+    font-size: 12px;
+}
+#copyright {
+    font-size: 10px;
+}
+#clipboard {
+    font-size: 12px;
+}
+</style>
+</head>
+<body onload="start()">
+建议使用chrome浏览器哦，ie9以下肯定是跑不起来了
+<table border="0">
+<tr valign="top"><td>
+<script type="text/javascript" src="a.js" charset='utf-8'></script>
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript" src="term.js"></script>
+<script type="text/javascript" src="cpux86.js"></script>
+<script type="text/javascript" src="jslinux.js"></script>
+<script type="text/javascript" ">
+//alert("b");
+</script>
+<div id="copyright">&copy; 2012, 
+</br>联系小宁子：
+</br>微博:<a href='http://weibo.com/killinux'>http://weibo.com/killinux</a>
+</br>博客:<a href='http://haoningabc.iteye.com'>http://haoningabc.iteye.com</a> 
+</br>电子邮件:frenchleaf@gmail.com和haoningabc@163.com </br>
+<b>如果想要源码，无偿提供哦</b></br>
+
+原理其实就是js实现了qemu，模拟x86的cpu</br>
+qemu先加载912个64k的块文件模拟hda  从hda000000000.bin 到hda000000911.bin</br>
+再加载2.6内核的img镜像 vmlinux-2.6.20.bin </br>
+接着启动汇编编译的IPL linuxstart.bin </br>
+</br>
+</div>
+<td><!--<input type="button" value="Clear clipboard" onclick="clear_clipboard();"><br><textarea row="4" cols="16" id="text_clipboard"></textarea-->
+</table>
+</body>
+</html>
